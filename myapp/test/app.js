@@ -42,8 +42,8 @@ contract('Token Manager', accounts => {
 
     beforeEach(async () => {
         const r = await daoFact.newDAO(root)
-        const dao = Kernel.at(r.logs.filter(l => l.event == 'DeployDAO')[0].args.dao)
-        const acl = ACL.at(await dao.acl())
+        const dao = await Kernel.at(r.logs.filter(l => l.event == 'DeployDAO')[0].args.dao)
+        const acl = await ACL.at(await dao.acl())
 
         await acl.createPermission(root, dao.address, APP_MANAGER_ROLE, root, { from: root })
 

@@ -20,7 +20,7 @@
     "react-dom": "^16.7.0",
     "shx": "^0.3.2",
     "styled-components": "^3.4.10",
-    "truffle": "^5.0.2",
+    "truffle": "4.1.14",
     "web3-provider-engine": "^14.1.0"
   },
   "devDependencies": {
